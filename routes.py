@@ -1,13 +1,15 @@
 from flask import Flask,render_template
-from forms import SignupForm
+from signup import SignupForm
+
 
 app = Flask(__name__)
 
-app.secret_key = 'development-key'
 
+app.secret_key = 'development-key'
 @app.route("/")
 def index():
 	return render_template("index.html")
+
 
 @app.route("/signup" , methods = ['GET','POST'])
 def signup():
