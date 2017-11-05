@@ -16,3 +16,7 @@ def signup():
 	elif request.method =="GET":
 
 		return render_template('signup.html',form = form)
+
+@app.route("/create")
+def create_page():
+	return render_template("create_page.html")
