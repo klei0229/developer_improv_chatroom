@@ -1,6 +1,9 @@
 from flask import Flask,render_template,request
-from signup import SignupForm
+from .forms import SignupForm
+#from . import signup 
+#from signup import SignupForm
 from . import app
+
 
 app.secret_key = 'development-key'
 @app.route("/")
@@ -16,3 +19,7 @@ def signup():
 	elif request.method =="GET":
 
 		return render_template('signup.html',form = form)
+
+
+if __name__ == "__main__":
+	app.run(debug=True)
