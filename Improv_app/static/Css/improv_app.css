@@ -1,3 +1,17 @@
-.title {
-  color:red; 
+.title_page {
+  display: inline-block;
+  color: grey;
 }
+.heading {
+  background-color: black;
+}
+.heading a {
+  color: grey;
+}
+.navbar {
+  margin-left: 55%;
+}
+.heading a:hover {
+  color: white;
+}
+/* not working */
