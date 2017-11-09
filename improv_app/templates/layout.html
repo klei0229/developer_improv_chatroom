@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Improv Chatroom</title>
+
+
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
+<style>
+body,
+html {
+    width: 100%;
+    height: 100%;
+
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.topnav {
+    font-size: 16px;
+    border-bottom: 1px outset rgba(192,192, 192,0);
+    background: rgba(192, 192, 192, 0.9);
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+}
+.topnav ul.navbar-nav li a {
+background: rgba(28, 28, 0.1);
+color: #000;
+}
+
+
+.topnav .navbar-brand {
+  background: rgba(28, 28, 28, 0.0);
+  color: #000;
+}
+</style>
+</head>
+<body>
+  <head>
+    <title>Improv Chatroom</title>
+</head>
+
+<body>
+	<div>
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+   <div class="container topnav">
+   <div class="navbar-header">
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+   </button>
+   <a class="navbar-brand topnav" target="_blank">Improv Chatroom</a>
+            </div>
+
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#Watch">Watch</a>
+                    </li>
+                    <li>
+                        <a href="#Create">Create</a>
+                    </li>
+                   <li>
+                        <a href="#User Profile">User Profile</a>
+                    </li>
+                    <li>
+                        <a href="#Sign Out">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	</div>
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>
