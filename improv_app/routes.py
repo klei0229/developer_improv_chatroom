@@ -1,10 +1,17 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 639aaef86a9b879b60af04fa29f568e6a4f48dca
 from flask import Flask,render_template,request, sessions, redirect, url_for
 from .forms import SignupForm
 from .models import db, User
 from . import app
 
+<<<<<<< HEAD
+#postgres sql
+=======
 #postgres sql 
+>>>>>>> 639aaef86a9b879b60af04fa29f568e6a4f48dca
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 db.init_app(app)
 
@@ -25,7 +32,11 @@ def signup():
 			return render_template('signup.html',form = form)
 		else:
 			newuser = User(form.first_name.data, form.last_name.data , form.email.data, form.password.data)
+<<<<<<< HEAD
+
+=======
 			
+>>>>>>> 639aaef86a9b879b60af04fa29f568e6a4f48dca
 			db.session.add(newuser)
 			db.session.commit()
 
@@ -55,4 +66,7 @@ def browse_acting():
 
 if __name__ == "__main__":
 	app.run(debug=True)
+<<<<<<< HEAD
+=======
 	
+>>>>>>> 639aaef86a9b879b60af04fa29f568e6a4f48dca
