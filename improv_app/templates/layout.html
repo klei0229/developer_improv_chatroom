@@ -75,9 +75,31 @@ color: #000;
                    <li>
                         <a href="#User Profile">User Profile</a>
                     </li>
-                    <li>
-                        <a href="{{url_for('signup')}}">Sign Up</a>
-                    </li>
+                    
+                    {% if userLoggedIn %}
+                      <li>
+                          <a href="{{url_for('logout')}}">Log out</a>
+                      </li>
+
+                    {% else  %}
+
+                      <li>
+                          <a href="{{url_for('login')}}">Log in</a>
+                      </li>
+
+                    {% endif %}
+
+                    {% if userLoggedIn %}
+
+
+                    {% else  %}
+
+                      <li>
+                          <a href="{{url_for('signup')}}">Sign up</a>
+                      </li>
+                    {% endif %}                      
+
+
                 </ul>
             </div>
         </div>
