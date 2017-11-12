@@ -3,13 +3,9 @@ from .forms import SignupForm
 from .models import db, User
 from . import app
 
-<<<<<<< Updated upstream
-#postgres sql 
 
-=======
 
 #postgres sql
->>>>>>> Stashed changes
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 db.init_app(app)
 
@@ -31,10 +27,6 @@ def signup():
 		else:
 			newuser = User(form.first_name.data, form.last_name.data , form.email.data, form.password.data)
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 			db.session.add(newuser)
 			db.session.commit()
 
