@@ -46,13 +46,10 @@ def home():
 def create_page():
 	return render_template("create_page.html")
 
-@app.route("/browseComedy")
+@app.route("/search")
 def browse_comedy():
-	return render_template("search_comedy.html")
+	return render_template("search.html")
 
-@app.route("/browseActing")
-def browse_acting():
-	return render_template("search_acting.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
