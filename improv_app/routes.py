@@ -36,11 +36,6 @@ def signup():
 
 		return render_template('signup.html',form = form)
 
-
-@app.route("/home")
-def home():
-	return render_template('index.html')
-
 #create a room decorator by jack
 @app.route("/create")
 def create_page():
