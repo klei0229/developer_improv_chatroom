@@ -45,6 +45,9 @@ def create_page():
 def browse_comedy():
 	return render_template("search.html")
 
+@app.route("/chatroom")
+def chatroom():
+	return render_template("chatroom.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)
