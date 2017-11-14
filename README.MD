@@ -7,3 +7,7 @@ Back-end: Python
 To Run The App:
 First: install flask, and flask-wtf (may need create a venv mode)
 Second: python application.py
+
+To Run the Test:
+First: Install pytest
+second: run py.test or pytest, either of them work!
