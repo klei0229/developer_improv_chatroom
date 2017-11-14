@@ -11,21 +11,21 @@ db.init_app(app)
 app.secret_key = 'development-key'
 @app.route("/")
 def index():
-	return render_template("index.html")
+    return render_template("index.html")
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
-	form = SignupForm()
-	if request.method == "POST":
-		if form.validate() == False:
+    form = SignupForm()
+    if request.method == "POST":
+        if form.validate() == False:
 			return render_template('signup.html', form = form)
-		else:
-			newuser = User(form.first_name.data, form.last_name.data , form.email.data, form.password.data)
-			db.session.add(newuser)
-			db.session.commit()
+	else:
+		    newuser = User(form.first_name.data, form.last_name.data , form.email.data, form.password.data)
+		    db.session.add(newuser)
+		    db.session.commit()
 			#session['email'] = newuser.email
-			return redirect(url_for('index'))
-	elif request.method =="GET":
-		return render_template('signup.html', form = form)
+		    return redirect(url_for('index'))
+    elif request.method =="GET":
+	     return render_template('signup.html', form = form)
 
 #create a room decorator by jack
 @app.route("/create")
