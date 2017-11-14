@@ -1,0 +1,102 @@
+<html>
+    <head>
+	<style>
+	html, body {
+    margin: 0;
+    background-color: #efefef;
+    font-family: sans-serif;
+}
+	.wrapper {
+    width: 500px;
+    height: 640px;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+	.banner {
+    height: 80px;
+    width: 100%;
+}
+	.banner p {
+    float: left;
+    display: inline-block;
+}
+	.controls {
+    height: 100px;
+    margin: 5px 0px;
+    position: relative;
+}
+	historyMsg {
+    height: 400px;
+    background-color: #fff;
+    overflow: auto;
+    padding: 2px;
+}
+#historyMsg img {
+    max-width: 99%;
+}
+	.timespan {
+    color: #ddd;
+}
+.items {
+    height: 30px;
+}
+#colorStyle {
+    width: 50px;
+    border: none;
+    padding: 0;
+}
+	.imageLable {
+    position: relative;
+}
+	#sendImage {
+    position: absolute;
+    width: 52px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+	#messageInput {
+    width: 440px;
+    max-width: 440px;
+    height: 90px;
+    max-height: 90px;
+}
+	#sendBtn {
+    width: 50px;
+    height: 96px;
+    float: right;
+}
+
+
+footer {
+    text-align: center;
+}
+	</style>
+        <title>Chatroom</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+	<div class="wrapper">
+            <div class="banner">
+                <h1>Chatroom</h1>
+		<span id="status"></span>
+            </div>
+	    <div id="historyMsg">
+            </div>
+	    <div class="controls" >
+                <div class="items">
+                    <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+		    <label for="sendImage" class="imageLable">
+                        <input type="button" value="image"  />
+                        <input id="sendImage" type="file" value="image"/>
+                    </label>
+		    <input id="clearBtn" type="button" value="clear" title="clear screen" />
+                </div>
+		<textarea id="messageInput" placeHolder="enter to send"></textarea>
+		<input id="sendBtn" type="button" value="SEND">
+            </div>
+        </div>
+    </body>
+</html>
