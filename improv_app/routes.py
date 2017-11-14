@@ -46,13 +46,12 @@ def home():
 def create_page():
 	return render_template("create_page.html")
 
-@app.route("/browseComedy")
-def browse_comedy():
-	return render_template("search_comedy.html")
 
-@app.route("/browseActing")
+
+@app.route("/session")
 def browse_acting():
-	return render_template("search_acting.html")
+	return render_template("session.html")
+
 
 @app.route("/login" , methods = ["GET" , "POST"])
 def login():
