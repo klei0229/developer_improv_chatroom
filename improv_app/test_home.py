@@ -7,7 +7,6 @@ class MyTest(TestCase):
         return app
 
 class improv_test(MyTest):
-    render_templates = False
     def test_home_page(self):
         self.client.get('/')
         self.assert_template_used('index.html')
