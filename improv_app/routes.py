@@ -10,9 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@loca
 db.init_app(app)
 
 #secretkey for login
-
 app.secret_key = 'development-key'
-
 @app.route("/")
 def index():
 	return render_template("index.html")
@@ -26,14 +24,11 @@ def signup():
 			return render_template('signup.html',form = form)
 		else:
 			newuser = User(form.first_name.data, form.last_name.data , form.email.data, form.password.data)
-
 			db.session.add(newuser)
 			db.session.commit()
-
 			#session['email'] = newuser.email
 			return redirect(url_for('index'))
 	elif request.method =="GET":
-
 		return render_template('signup.html',form = form)
 
 #create a room decorator by jack
@@ -51,17 +46,13 @@ def login():
 			else:
 				email = form.email.data
 				password = form.password.data
-
 				user = User.query.filter_by(email=email).first()
 				if user is not None and user.check_password(password):
 					session['email'] = form.email.data
 					#return redirect(url_for('home'))
-					
 					return render_template('index.html',userLoggedIn = True)
-					
-				else: 
+				else:
 					return redirect(url_for('login'))
-
 		elif request.method == 'GET':
 			return render_template('login.html', form= form)
 
