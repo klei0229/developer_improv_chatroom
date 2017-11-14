@@ -16,3 +16,6 @@ class improv_test(MyTest):
     def test_create_page(self):
         self.client.get('/create')
         self.assert_template_used('create_page.html')
+    def test_search_page(self):
+        self.client.get('/search')
+        self.assert_template_used('search.html')
