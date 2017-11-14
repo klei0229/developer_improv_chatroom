@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/css/search.css">
+</head>
+	<div class="banner">
+		<div class="container">
+			<div class="span" >
+			    <h2>Live Improv Theatre<br>Watch live sessions going on right now</h2>
+
+        <div class="search">
+        <input type="text" class="search_key"  target="_blank" class="baidu-highlight" placeholder="Type" Style="font-size: 2em;">
+  <select name="options" Style="font-size: 2em;">
+  <option value="Arting" Style="font-size: 1em;">Arting</option>
+    <option value="Comedy" Style="font-size: 1em;">Comedy</option>
+</select>
+        <input type="submit" class="submit" value="Search" Style="font-size: 2em;">
+    </div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+{% endblock %}

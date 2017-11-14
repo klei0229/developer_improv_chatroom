@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <head>
+	
+        <title>Chatroom</title>
+        <link rel="stylesheet" type="text/css" href="static/css/create.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+
+
+    <h1>Improv Acting Session 1</h1>
+     
+    <h4>Current Prompt Place Holder<h4>
+    <h4> Category: Example </h4>
+    <h4> Timer Place Holder </h4>
+
+    <h4>Actor 1: "_______"</h4>
+
+    <video id="localVideo" autoplay></video>
+    <video id="remoteVideo" autoplay></video>
+
+  <div>
+    <button id="startButton">Start</button>
+    <button id="changePrompt">Change Prompt</button>
+    <button id="endSession">End Session</button>
+
+  </div>
+
+  <script src="../static/js/video.js"></script>
+  <script src="../static/js/adapter.js"></script>
+   
+
+
+
+	<div class="wrapper">
+            <div class="banner">
+                <h1>Chatroom</h1>
+		<span id="status"></span>
+            </div>
+	    <div id="historyMsg">
+            </div>
+	    <div class="controls" >
+                <div class="items">
+                    <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+		    <label for="sendImage" class="imageLable">
+                        <input type="button" value="image"  />
+                        <input id="sendImage" type="file" value="image"/>
+                    </label>
+		    <input id="clearBtn" type="button" value="clear" title="clear screen" />
+                </div>
+		<textarea id="messageInput" placeHolder="enter to send"></textarea>
+		<input id="sendBtn" type="button" value="SEND">
+            </div>
+        </div>
+    </body>
+
+
+
+{% endblock %}
