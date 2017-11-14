@@ -1,21 +1,16 @@
-from flask import Flask,render_template,request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
 
-
-
-#postgres sql
+#postgres sq
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 db.init_app(app)
-
 #secretkey for login
 app.secret_key = 'development-key'
 @app.route("/")
 def index():
 	return render_template("index.html")
-
-
 @app.route("/signup" , methods = ['GET','POST'])
 def signup():
 	form = SignupForm()
@@ -39,22 +34,22 @@ def create_page():
 
 @app.route("/login" , methods = ["GET" , "POST"])
 def login():
-		form = LoginForm()
-		if request.method == "POST":
-			if form.validate() == False:
-				return render_template("login.html" , form = form)
+	form = LoginForm()
+	if request.method == "POST":
+		if form.validate() == False:
+			return render_template("login.html" , form = form)
+		else:
+			email = form.email.data
+			password = form.password.data
+			user = User.query.filter_by(email=email).first()
+			if user is not None and user.check_password(password):
+				session['email'] = form.email.data
+				#return redirect(url_for('home'))
+				return render_template('index.html',userLoggedIn = True)
 			else:
-				email = form.email.data
-				password = form.password.data
-				user = User.query.filter_by(email=email).first()
-				if user is not None and user.check_password(password):
-					session['email'] = form.email.data
-					#return redirect(url_for('home'))
-					return render_template('index.html',userLoggedIn = True)
-				else:
-					return redirect(url_for('login'))
-		elif request.method == 'GET':
-			return render_template('login.html', form= form)
+				return redirect(url_for('login'))
+	elif request.method == 'GET':
+		return render_template('login.html', form= form)
 
 @app.route("/logout")
 def logout():
@@ -65,14 +60,9 @@ def logout():
 def browse():
 	return render_template("search.html")
 
-@app.route("/chatroom")
+@app.route("/session")
 def chatroom():
 	return render_template("chatroom.html")
-
-@app.route("/session")
-def session():
-	return render_template("chatroom.html")
-
 
 if __name__ == "__main__":
 	app.run(debug=True)
