@@ -8,6 +8,6 @@ class MyTest(TestCase):
 
 class improv_test(MyTest):
     render_templates = False
-    def test_assert_mytemplate_used(self):
-        response = self.client.get("/templates/")
+    def test_home_page(self):
+        self.client.get('/')
         self.assert_template_used('index.html')
