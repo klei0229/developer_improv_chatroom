@@ -3,8 +3,9 @@ from .forms import SignupForm
 from .models import db, User
 from . import app
 
-#postgres sql 
 
+
+#postgres sql
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 db.init_app(app)
 
@@ -26,7 +27,6 @@ def signup():
 		else:
 			newuser = User(form.first_name.data, form.last_name.data , form.email.data, form.password.data)
 
-
 			db.session.add(newuser)
 			db.session.commit()
 
@@ -36,23 +36,15 @@ def signup():
 
 		return render_template('signup.html',form = form)
 
-
-@app.route("/home")
-def home():
-	return render_template('index.html')
-
 #create a room decorator by jack
 @app.route("/create")
 def create_page():
 	return render_template("create_page.html")
 
-@app.route("/browseComedy")
+@app.route("/search")
 def browse_comedy():
-	return render_template("search_comedy.html")
+	return render_template("search.html")
 
-@app.route("/browseActing")
-def browse_acting():
-	return render_template("search_acting.html")
 
 if __name__ == "__main__":
 	app.run(debug=True)

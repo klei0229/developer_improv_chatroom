@@ -1,0 +1,61 @@
+
+  .create_title {
+    padding-top: 1%;
+    text-align: center;
+    font-family: museo;
+  }
+  .create_title_body {
+    margin-top: 53px;
+    background-color:rgba(0,0,0, 0.3);
+    height: 35%;
+  }
+  .stand_description {
+    border-left: 10px solid skyblue;
+    background-color: rgba(161,218,199,0.4);
+    width: 50%;
+    margin-left: 27%;
+    height: 76%;
+  }
+  .stand_description p {
+    margin-left: 0.3%;
+  }
+  .create_body {
+    padding-top: 1px;
+    background-color:rgba(0,0,0, 0.4);
+    height: 60%;
+  }
+  .room_title {
+    margin-left:19%;
+    color:rgba(25,25,112,0.6);
+    font-family: museo;
+    font-size: 36px;
+  }
+  .room_body {
+    width: 18%;
+    margin-left: 19%;
+  }
+  .lobby {
+    position: relative;
+    top:25px;
+  }
+  .select_time {
+    position: relative;
+    top: 75px;
+  }
+  .room_type {
+    position: relative;
+    top:125px;
+  }
+  .c_box {
+    position: relative;
+    top: 175px;
+  }
+  .create_button {
+    position: relative;
+    top: 200px;
+    left:275px;
+  }
+  .room_name, .time_name  {
+    font-size: 18px;
+    font-family: avenir next;
+  }
