@@ -1,1 +1,1 @@
-web: gunicorn improv_app:routes
+web: gunicorn improv_app:app
