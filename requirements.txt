@@ -1,5 +1,11 @@
-Flask==0.12.2
-Jinja2==2.6
-Werkzeug==0.8.3
-certifi==0.0.8
-chardet==1.0.1
+[packages]
+
+django = "*"
+gunicorn = "*"
+psycopg2 = "*"
+whitenoise = "*"
+flask = "*"
+
+
+[requires]
+python_version = "3.6"
