@@ -1,1 +1,1 @@
-web: gunicorn improv_app:app
+web: gunicorn application
