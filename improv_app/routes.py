@@ -3,7 +3,7 @@ from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
 
-from flask.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
 #postgres sql
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
