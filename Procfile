@@ -1,1 +1,1 @@
-web: gunicorn improv_app:__init__
+web: gunicorn improv_app:app
