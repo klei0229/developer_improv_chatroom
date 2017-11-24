@@ -1,1 +1,1 @@
-web: gunicorn improv_app.application:application
+web: gunicorn --chdir improv_app __init__:app
