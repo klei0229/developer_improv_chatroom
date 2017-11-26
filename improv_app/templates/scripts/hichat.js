@@ -29,3 +29,8 @@ HiChat.prototype = {
                 document.getElementById('info').textContent = '!fail to connect :(';
             }
         });
+	this.socket.on('system', function(nickName, userCount, type) {
+            var msg = nickName + (type == 'login' ? ' joined' : ' left');
+            that._displayNewMsg('system ', msg, 'red');
+            document.getElementById('status').textContent = userCount + (userCount > 1 ? ' users' : ' user') + ' online';
+        });
