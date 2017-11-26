@@ -86,3 +86,8 @@ HiChat.prototype = {
                 var file = this.files[0],
                     reader = new FileReader(),
                     color = document.getElementById('colorStyle').value;
+                if (!reader) {
+                    that._displayNewMsg('system', '!your browser doesn\'t support fileReader', 'red');
+                    this.value = '';
+                    return;
+                };
