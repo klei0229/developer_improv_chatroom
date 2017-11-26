@@ -16,3 +16,9 @@ Solution is install blinker by using pip)
 
 Deploy Using Heroku:
 https://limitless-island-91246.herokuapp.com/create
+
+Warning: to add/change new style in external file, don't be worried about if the page
+didn't make any change. You need to refresh the css file in website in order make it work in html,
+if this still didn't work, you need to inspect element -> source -> find the css file -> fresh.
+For exmaple, if you change/add something in chatroom.css. Refresh the page of 127.../static/css/chatroom.css
+make sure the change/addition you made is in there, refresh the html page.
