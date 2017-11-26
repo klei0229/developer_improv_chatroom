@@ -14,3 +14,9 @@ background-color: #ddd;
 height: 80px;
 width: 100%;
 }
+historyMsg {
+height: 400px;
+background-color: #fff;
+overflow: auto;
+padding: 2px;
+}
