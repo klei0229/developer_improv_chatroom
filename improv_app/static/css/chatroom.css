@@ -44,3 +44,9 @@ left: 0;
 opacity: 0;
 overflow: hidden;
 }
+#messageInput {
+width: 440px;
+max-width: 440px;
+height: 90px;
+max-height: 90px;
+}
