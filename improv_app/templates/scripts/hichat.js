@@ -8,4 +8,9 @@ var HiChat = function() {
 HiChat.prototype = {
     init: function() {
         var that = this;
-	 this.socket = io.connect();
+        this.socket = io.connect();
+        this.socket.on('connect', function() {
+            document.getElementById('info').textContent = 'get yourself a nickname :)';
+            document.getElementById('nickWrapper').style.display = 'block';
+            document.getElementById('nicknameInput').focus();
+        });
