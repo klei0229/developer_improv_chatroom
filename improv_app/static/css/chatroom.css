@@ -1,0 +1,60 @@
+html, body {
+margin: 0;
+background-color: #efefef;
+font-family: sans-serif;
+}
+.wrapper {
+width: 500px;
+height: 640px;
+padding: 5px;
+margin: 0 auto;
+background-color: #ddd;
+}
+.banner {
+height: 80px;
+width: 100%;
+}
+historyMsg {
+height: 400px;
+background-color: #fff;
+overflow: auto;
+padding: 2px;
+}
+#historyMsg img {
+max-width: 99%;
+}
+.timespan {
+color: #ddd;
+}
+.items {
+height: 30px;
+}
+#colorStyle {
+width: 50px;
+border: none;
+padding: 0;
+}
+.imageLable {
+position: relative;
+}
+#sendImage {
+position: absolute;
+width: 52px;
+left: 0;
+opacity: 0;
+overflow: hidden;
+}
+#messageInput {
+width: 440px;
+max-width: 440px;
+height: 90px;
+max-height: 90px;
+}
+#sendBtn {
+width: 50px;
+height: 96px;
+float: right;
+}
+footer {
+text-align: center;
+}
