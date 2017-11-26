@@ -34,3 +34,6 @@ HiChat.prototype = {
             that._displayNewMsg('system ', msg, 'red');
             document.getElementById('status').textContent = userCount + (userCount > 1 ? ' users' : ' user') + ' online';
         });
+	this.socket.on('newMsg', function(user, msg, color) {
+            that._displayNewMsg(user, msg, color);
+        });
