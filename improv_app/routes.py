@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import os
 
+import os
 from flask import Flask,render_template,request, session, redirect, url_for
-=======
-from flask import Flask, render_template, request, session, redirect, url_for
->>>>>>> d3f5235fc797bf1f5ec12c253e9cc043e8b1bf3b
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
-
-<<<<<<< HEAD
 from flask_sqlalchemy import SQLAlchemy
 
 #postgres sql
