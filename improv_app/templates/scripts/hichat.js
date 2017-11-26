@@ -81,3 +81,8 @@ HiChat.prototype = {
 	document.getElementById('clearBtn').addEventListener('click', function() {
             document.getElementById('historyMsg').innerHTML = '';
         }, false);
+	document.getElementById('sendImage').addEventListener('change', function() {
+            if (this.files.length != 0) {
+                var file = this.files[0],
+                    reader = new FileReader(),
+                    color = document.getElementById('colorStyle').value;
