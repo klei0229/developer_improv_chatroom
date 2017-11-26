@@ -22,3 +22,10 @@ HiChat.prototype = {
             document.getElementById('loginWrapper').style.display = 'none';
             document.getElementById('messageInput').focus();
         });
+	this.socket.on('error', function(err) {
+            if (document.getElementById('loginWrapper').style.display == 'none') {
+                document.getElementById('status').textContent = '!fail to connect :(';
+            } else {
+                document.getElementById('info').textContent = '!fail to connect :(';
+            }
+        });
