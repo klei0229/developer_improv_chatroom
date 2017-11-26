@@ -34,3 +34,6 @@ width: 50px;
 border: none;
 padding: 0;
 }
+.imageLable {
+position: relative;
+}
