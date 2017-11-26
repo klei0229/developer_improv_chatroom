@@ -4,3 +4,4 @@ var express = require('express'),
     io = require('socket.io').listen(server),
     users = [];
 app.use('/', express.static(__dirname + '/templates'));
+server.listen(3000);
