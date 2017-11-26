@@ -17,3 +17,8 @@ HiChat.prototype = {
 	this.socket.on('nickExisted', function() {
             document.getElementById('info').textContent = '!nickname is taken, choose another pls';
         });
+	this.socket.on('loginSuccess', function() {
+            document.title = 'hichat | ' + document.getElementById('nicknameInput').value;
+            document.getElementById('loginWrapper').style.display = 'none';
+            document.getElementById('messageInput').focus();
+        });
