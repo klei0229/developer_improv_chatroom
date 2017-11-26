@@ -78,3 +78,6 @@ HiChat.prototype = {
                 that._displayNewMsg('me', msg, color);
             };
         }, false);
+	document.getElementById('clearBtn').addEventListener('click', function() {
+            document.getElementById('historyMsg').innerHTML = '';
+        }, false);
