@@ -37,3 +37,10 @@ padding: 0;
 .imageLable {
 position: relative;
 }
+#sendImage {
+position: absolute;
+width: 52px;
+left: 0;
+opacity: 0;
+overflow: hidden;
+}
