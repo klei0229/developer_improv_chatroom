@@ -91,3 +91,11 @@ HiChat.prototype = {
                     this.value = '';
                     return;
                 };
+                reader.onload = function(e) {
+                    this.value = '';
+                    that.socket.emit('img', e.target.result, color);
+                    that._displayImage('me', e.target.result, color);
+                };
+                reader.readAsDataURL(file);
+            };
+        }, false);
