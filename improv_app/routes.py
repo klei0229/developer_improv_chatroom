@@ -1,13 +1,18 @@
+import os
+
 from flask import Flask,render_template,request, session, redirect, url_for
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
 
-
+from flask_sqlalchemy import SQLAlchemy
 
 #postgres sql
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
+#db.init_app(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
-db.init_app(app)
+db = SQLAlchemy(app)
 
 #secretkey for login
 
