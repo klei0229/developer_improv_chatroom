@@ -14,3 +14,6 @@ HiChat.prototype = {
             document.getElementById('nickWrapper').style.display = 'block';
             document.getElementById('nicknameInput').focus();
         });
+	this.socket.on('nickExisted', function() {
+            document.getElementById('info').textContent = '!nickname is taken, choose another pls';
+        });
