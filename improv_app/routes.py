@@ -11,7 +11,7 @@ from flask_sqlalchemy import SQLAlchemy
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 #db.init_app(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 db = SQLAlchemy(app)
 
 #secretkey for login
