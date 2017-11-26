@@ -13,3 +13,6 @@ First: Install pytest
 second: run py.test or pytest, either of them work!
 (notes: someone may received error of version problem of flask that related to blinker.
 Solution is install blinker by using pip)
+
+Deploy Using Heroku:
+https://limitless-island-91246.herokuapp.com/create
