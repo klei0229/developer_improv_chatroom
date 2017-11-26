@@ -56,3 +56,15 @@ HiChat.prototype = {
                 };
             };
         }, false);
+	document.getElementById('sendBtn').addEventListener('click', function() {
+            var messageInput = document.getElementById('messageInput'),
+                msg = messageInput.value,
+                color = document.getElementById('colorStyle').value;
+            messageInput.value = '';
+            messageInput.focus();
+            if (msg.trim().length != 0) {
+                that.socket.emit('postMsg', msg, color);
+                that._displayNewMsg('me', msg, color);
+                return;
+            };
+        }, false);
