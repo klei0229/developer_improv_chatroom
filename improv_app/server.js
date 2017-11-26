@@ -25,3 +25,6 @@ io.sockets.on('connection', function(socket) {
             socket.broadcast.emit('system', socket.nickname, users.length, 'logout');
         }
     });
+	 socket.on('postMsg', function(msg, color) {
+        socket.broadcast.emit('newMsg', socket.nickname, msg, color);
+    });
