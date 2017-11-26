@@ -29,3 +29,8 @@ color: #ddd;
 .items {
 height: 30px;
 }
+#colorStyle {
+width: 50px;
+border: none;
+padding: 0;
+}
