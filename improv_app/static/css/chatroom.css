@@ -50,3 +50,8 @@ max-width: 440px;
 height: 90px;
 max-height: 90px;
 }
+#sendBtn {
+width: 50px;
+height: 96px;
+float: right;
+}
