@@ -3,14 +3,11 @@ from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
 
-#postgres sql
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
-#db.init_app(app)
+
 
 db.init_app(app)
+#connecting to heroku database link
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jfgrougikqidof:1fe420ca8edb738fac285e431414aa706e0023644c952259a9fe4e1a3ee13590@ec2-184-73-247-240.compute-1.amazonaws.com:5432/der80kevtgq4nt'
-
-#secretkey for login
 
 app.secret_key = 'development-key'
 
@@ -40,11 +37,9 @@ def signup():
 
 		return render_template('signup.html',form = form)
 
-#create a room decorator by jack
 @app.route("/create")
 def create_page():
 	return render_template("create_page.html")
-
 
 @app.route("/login" , methods = ["GET" , "POST"])
 def login():
