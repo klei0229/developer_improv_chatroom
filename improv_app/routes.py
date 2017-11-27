@@ -1,18 +1,14 @@
-import os
-
 from flask import Flask,render_template,request, session, redirect, url_for
 from .forms import SignupForm, LoginForm
 from .models import db, User
 from . import app
 
-from flask_sqlalchemy import SQLAlchemy
-
 #postgres sql
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
 #db.init_app(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:xyz123890xyz@localhost:5432/learningflask'
-db = SQLAlchemy(app)
+db.init_app(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jfgrougikqidof:1fe420ca8edb738fac285e431414aa706e0023644c952259a9fe4e1a3ee13590@ec2-184-73-247-240.compute-1.amazonaws.com:5432/der80kevtgq4nt'
 
 #secretkey for login
 
@@ -35,7 +31,7 @@ def signup():
 			db.session.add(newuser)
 			db.session.commit()
 
-			#session['email'] = newuser.email
+			session['email'] = newuser.email
 			return redirect(url_for('index'))
 	elif request.method =="GET":
 
