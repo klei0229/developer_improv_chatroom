@@ -34,7 +34,7 @@ def signup():
 			db.session.add(newuser)
 			db.session.commit()
 
-			session['email'] = newuser.email
+			session['email'] = form.email.data
 			return redirect(url_for('index'))
 	elif request.method =="GET":
 
