@@ -79,8 +79,8 @@ def browse():
 	return render_template("search.html")
 
 
-@app.route("/session")
-def session():
+@app.route("/chatroom")
+def chatroom():
 	return render_template("chatroom.html")
 
 
