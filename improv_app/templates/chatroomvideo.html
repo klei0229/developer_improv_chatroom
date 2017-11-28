@@ -1,4 +1,8 @@
+{% extends "layout.html" %}
+
 {% block content %}
+
+<body>
 <head>
    <link rel="stylesheet" type="text/css" href="static/css/chatroom.css">
      <title>Chatroom</title>
@@ -7,16 +11,19 @@
  </head>
  
  
-     <h1>Improv Acting Session 1</h1>
+     
+
+
+
+  <div class="banner">
+      <div class="container">
+        <div class="span" >
+            <h1>Improv Acting Session 1</h1>
  
      <h4>Current Prompt Place Holder<h4>
      <h4> Category: Example </h4>
      <h4> Timer Place Holder </h4>
              <h1>Improv Chatroom 1</h1>
-           <h2>Actor 1: </h2>
-           <video id="localVideo" autoplay></video>
-           <video id="remoteVideo" autoplay></video>
- 
            <div>
              <button id="startButton">Start Session</button>
              <button id="callButton">Call</button>
@@ -24,8 +31,32 @@
              <button id="changePrompt">Change Prompt</button>
 
            </div>
+             
+           <h2>Actor 1: </h2>
+           <video id="localVideo" autoplay></video>
+           <h2>Actor 2: </h2>
+           <video id="remoteVideo" autoplay></video>
+ 
+
  
    <script src="../static/js/video.js"></script>
    <script src="../static/js/adapter.js"></script>
 
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 {% endblock %}

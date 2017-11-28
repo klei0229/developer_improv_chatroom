@@ -1,5 +1,6 @@
 'use strict';
 
+
 var startButton = document.getElementById('startButton');
 var callButton = document.getElementById('callButton');
 var hangupButton = document.getElementById('hangupButton');
@@ -60,6 +61,13 @@ function gotStream(stream) {
 }
 
 function start() {
+
+  video {
+  max-width: 100%;
+  width: 160px;
+}
+
+
   trace('Requesting local stream');
   startButton.disabled = true;
   navigator.mediaDevices.getUserMedia({
