@@ -1,58 +1,149 @@
-{% extends "layout.html" %}
+<html>
+    <head>
+        <style>
+          html, body {
+    margin: 0;
+    background-color: #efefef;
+    font-family: sans-serif;
+}
+.wrapper {
+    width: 500px;
+    height: 640px;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+#loginWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 5, 5, .6);
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding-top: 200px;
+}
+#nickWrapper {
+    display: none;
+}
+.banner {
+    height: 80px;
+    width: 100%;
+}
+.banner p {
+    float: left;
+    display: inline-block;
+}
+.controls {
+    height: 100px;
+    margin: 5px 0px;
+    position: relative;
+}
+#historyMsg {
+    height: 400px;
+    background-color: #fff;
+    overflow: auto;
+    padding: 2px;
+}
+#historyMsg img {
+    max-width: 99%;
+}
+.timespan {
+    color: #ddd;
+}
+.items {
+    height: 30px;
+}
+#colorStyle {
+    width: 50px;
+    border: none;
+    padding: 0;
+}
 
-{% block content %}
 
-<head>
-  <link rel="stylesheet" type="text/css" href="static/css/chatroom.css">
-    <title>Chatroom</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
+.imageLable {
+    position: relative;
+}
+#sendImage {
+    position: absolute;
+    width: 52px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#messageInput {
+    width: 440px;
+    max-width: 440px;
+    height: 90px;
+    max-height: 90px;
+}
+#sendBtn {
+    width: 50px;
+    height: 96px;
+    float: right;
+}
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 105px;
+    position: absolute;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
+#emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+#emojiWrapper img:hover {
+    background-color: blue;
+}
+.emoji{
+    display: inline;
+}
+footer {
+    text-align: center;
+}
+          
+        </style>
+    </head>
     <body>
-
-    <h1>Improv Acting Session 1</h1>
-
-    <h4>Current Prompt Place Holder<h4>
-    <h4> Category: Example </h4>
-    <h4> Timer Place Holder </h4>
-            <h1>Improv Chatroom 1</h1>
-          <h2>Actor 1: </h2>
-          <video id="localVideo" autoplay></video>
-          <video id="remoteVideo" autoplay></video>
-
-          <div>
-            <button id="startButton">Start Session</button>
-            <button id="callButton">Call</button>
-            <button id="hangupButton">End Session</button>
-            <button id="changePrompt">Change Prompt</button>
-
-          </div>
-
-  <script src="../static/js/video.js"></script>
-  <script src="../static/js/adapter.js"></script>
-
-	<div class="wrapper">
+        <div class="wrapper">
             <div class="banner">
                 <h1>Chatroom</h1>
-		<span id="status"></span>
+                <span id="status"></span>
             </div>
-	    <div id="historyMsg">
+            <div id="historyMsg">
             </div>
-	    <div>
+            <div class="controls" >
                 <div class="items">
                     <input id="colorStyle" type="color" placeHolder='#000' title="font color" />
-		    <label for="sendImage" class="imageLable">
-                        <input type="button" value="image"  />
+                    
+                    <label for="sendImage" class="imageLable">
+                    <input type="button" value="image"  />
                         <input id="sendImage" type="file" value="image"/>
                     </label>
-		    <input id="clearBtn" type="button" value="clear" title="clear screen" />
+                    <input id="clearBtn" type="button" value="clear" title="clear screen" />
                 </div>
-		<textarea id="messageInput" placeHolder="enter to send"></textarea>
-		<input id="sendBtn" type="button" value="SEND">
+        <textarea id="messageInput" placeHolder="enter to send"></textarea>
+                <input id="sendBtn" type="button" value="SEND">
+                <div id="emojiWrapper">
+                </div>
             </div>
         </div>
+    <div id="loginWrapper">
+            <p id="info">connecting to server...</p>
+            <div id="nickWrapper">
+                <input type="text" placeHolder="nickname" id="nicknameInput" />
+                <input type="button" value="OK" id="loginBtn" />
+            </div>
+        </div>
+    <script src="/socket.io/socket.io.js"></script>
+        <script src="scripts/chatroom.js"></script>
     </body>
-
-
-
-{% endblock %}
+</html>
+    
