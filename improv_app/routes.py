@@ -8,7 +8,7 @@ db.init_app(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jfgrougikqidof:1fe420ca8edb738fac285e431414aa706e0023644c952259a9fe4e1a3ee13590@ec2-184-73-247-240.compute-1.amazonaws.com:5432/der80kevtgq4nt'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wfibcqxjvbzada:5ea7dff6b2fd7aa8add4fc96326defc8eadbb2a34661e1304a3de08053817567@ec2-54-235-90-125.compute-1.amazonaws.com:5432/d6s3p8sri4ie30'
 
-db = SQLAlchemy(app)
+#
 
 #secretkey for login
 app.secret_key = 'development-key'
